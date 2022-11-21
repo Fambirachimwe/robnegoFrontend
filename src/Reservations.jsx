@@ -24,7 +24,7 @@ const Reservations = () => {
             <td>{element.seatingType}</td>
             <td>{element.date}</td>
             <td>{element.completed === true ? 'Completed' : 'Pending'}</td>
-            <td>{<IconEye onClick onClick={() => history.push(`/reservations/${element._id}`)} />} </td>
+            <td>{<IconEye onClick={() => history.push(`/reservations/${element._id}`)} />} </td>
         </tr>
     ));
 
