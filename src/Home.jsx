@@ -19,8 +19,6 @@ import ReservationDetailPage from './ReservationDetailPage';
 
 const Home = () => {
 
-
-
     return (
 
         <AppShell

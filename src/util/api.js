@@ -35,12 +35,12 @@ export const login = (email, password) => {
     //             // footer: '<a href="">Why do I have this issue?</a>'
     //         })
     //     } else {
-    //         Swal.fire({
-    //             icon: 'Error',
-    //             title: 'Auth failed',
-    //             text: 'username or password is incorrect',
-    //             // footer: '<a href="">Why do I have this issue?</a>'
-    //         })
+    // Swal.fire({
+    //     icon: 'Error',
+    //     title: 'Auth failed',
+    //     text: 'username or password is incorrect',
+    //     // footer: '<a href="">Why do I have this issue?</a>'
+    // })
     //     }
 
     // })
