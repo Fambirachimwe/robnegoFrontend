@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppShell, Navbar, Header, Table } from '@mantine/core';
+import { AppShell, Navbar, Header, Table, Button, Avatar } from '@mantine/core';
 import {
     BrowserRouter as Router,
     Switch,
@@ -35,7 +35,16 @@ const Home = () => {
                     <NavLink label="Feedback" component="a" href="/feedback" />
 
                 </Navbar>}
-            header={<Header height={60} p="xs">{/* Header content */}</Header>}
+            header={
+                <Header height={60} p="xs" >
+
+                    <Flex justify={'space-between'}>
+                        <Avatar radius="xl" />
+                        <Button variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>Login</Button>
+                    </Flex>
+
+                </Header>
+            }
             styles={(theme) => ({
 
                 main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },

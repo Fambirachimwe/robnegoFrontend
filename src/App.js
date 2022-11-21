@@ -2,10 +2,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   // Link
 } from "react-router-dom";
 import Home from "./Home";
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+import Login from "./Login";
+import Register from "./Register";
 
 const queryClient = new QueryClient()
 
@@ -16,11 +19,24 @@ function App() {
       <div className="App">
 
         <Router>
+          {
+            localStorage.getItem('token') ? (
+              <Redirect to="/" />
+            ) :
 
-
+              (
+                <Redirect to="/login" />
+              )
+          }
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/">
+              <Register />
             </Route>
 
           </Switch>
